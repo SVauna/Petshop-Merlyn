@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merlyn PetShop | Contato</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="page-contato">
+<header class="topo">
+    <div class="logo-container">
+        <img src="img/logo.png" class="logo" alt="Logo da Merlyn PetShop">
+        <div>
+            <p class="marca">Merlyn PetShop</p>
+            <h1>Entre em contato</h1>
+        </div>
+    </div>
+
+    <nav>
+        <a href="inicio.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <section class="pagina-topo">
+        <p class="titulo-secao">Atendimento</p>
+        <h2>Estamos aqui para ajudar você e seu pet</h2>
+        <p>
+            Tire dúvidas, peça recomendações e envie sua mensagem para nossa equipe.
+        </p>
+    </section>
+
+    <section class="contato-layout">
+        <div class="contato-info destaque-box">
+            <img src="img/contatodog.png" alt="Cachorro representando contato" class="imagem">
+            <div>
+                <h2>Fale conosco</h2>
+                <p><strong>Email:</strong> contato@merlynpetshop.com</p>
+                <p><strong>Telefone:</strong> (11) 91111-1111</p>
+                <p><strong>Horário:</strong> Segunda a sábado, das 8h às 18h</p>
+            </div>
+        </div>
+
+        <form>
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="Digite seu nome" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Digite seu email" required>
+
+            <label for="telefone">Telefone</label>
+            <input id="telefone" type="tel" placeholder="(00) 00000-0000">
+
+            <label for="pet">Tipo de pet</label>
+            <select id="pet">
+                <option>Cachorro</option>
+                <option>Gato</option>
+                <option>Outro</option>
+            </select>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar?"></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Merlyn PetShop. Atendimento com carinho para você e seu pet.</p>
+</footer>
+</body>
+</html>

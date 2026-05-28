@@ -1,0 +1,375 @@
+/* Site Merlyn PetShop
+   Aula 5 - Homepage responsiva para 480px */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Fundo das páginas */
+.page-home {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("img/abertura pet shop.png");
+}
+
+.page-produtos {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("img/produto.png");
+}
+
+.page-contato {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("img/contatodog.png");
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Cabeçalho */
+.topo {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ff914d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.marca {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.topo h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav a.ativo {
+    background-color: #2ea39c;
+}
+
+/* Conteúdo */
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p,
+li {
+    line-height: 1.6;
+}
+
+.hero,
+.destaque-box,
+.info-card,
+.card,
+.pagina-topo,
+.cta,
+form {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Página inicial */
+.hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    color: #fff;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35)), url("img/petsfelizes.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 550px;
+}
+
+.hero h2 {
+    color: #fff;
+    font-size: 34px;
+}
+
+.selo,
+.titulo-secao,
+.tag {
+    color: #ff914d;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero .selo {
+    color: #fff;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.botao,
+button {
+    background-color: #ff914d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover,
+button:hover {
+    background-color: #2ea39c;
+}
+
+.botao-secundario {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+/* Blocos */
+.intro,
+.duas-colunas,
+.contato-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.imagem,
+.imagem-card {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.imagem-card {
+    height: 210px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-conteudo {
+    padding-top: 12px;
+}
+
+.tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.lista-bonita {
+    margin-left: 18px;
+    margin-top: 10px;
+}
+
+.pagina-topo,
+.cta {
+    text-align: center;
+}
+
+/* Contato */
+.contato-info {
+    position: relative;
+}
+
+.contato-info::before {
+    content: "Atendimento";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: #2ea39c;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    margin-bottom: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ff914d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .topo,
+    nav,
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .intro,
+    .duas-colunas,
+    .contato-layout,
+    .beneficios,
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    nav,
+    nav a,
+    .botao,
+    button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Aula 5 - celular 480px */
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .topo {
+        padding: 14px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .topo h1 {
+        font-size: 17px;
+    }
+
+    main {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 25px 18px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .destaque-box,
+    .info-card,
+    .card,
+    .pagina-topo,
+    .cta,
+    form {
+        padding: 16px;
+    }
+}
